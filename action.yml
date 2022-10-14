@@ -1,0 +1,15 @@
+name: QML Format
+description: runs qmlformat
+branding:
+  icon: minimize
+  color: orange
+inputs:
+  file-glob:
+    description: File Glob
+    required: false
+    default: '*.qml'
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.file-glob }}
