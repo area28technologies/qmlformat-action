@@ -1,6 +1,4 @@
-FROM fstlx/qt5:ubuntu18
-
-RUN apt-get install diffutils -y
+FROM stateoftheartio/qt6:6.4-macos-aqt
 
 COPY run.sh /run.sh
 
