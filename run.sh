@@ -5,7 +5,7 @@ QML_FILES=$(find . -name "$1")
 
 for f in $QML_FILES
 do
-  diff $f <(/opt/Qt/6.4.0/macos/bin/qmlformat $f)
+  diff -u $f <(/opt/Qt/6.4.0/macos/bin/qmlformat $f)
   EXIT_CODE=$(($EXIT_CODE || $?))
 done
 
